@@ -2,7 +2,6 @@ mkdir AHMED
 touch one.txt two.txt three.txt four.txt
 mkdir BAD
 touch bad.txt
-mv one.txt Downloads
 cp one.txt copy.txt
 cd AHMED
 nano two.txt
