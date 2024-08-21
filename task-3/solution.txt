@@ -1,0 +1,39 @@
+mkdir ~/project_fies
+mkdir -p ~/project_Files/reports ~/project_Files/logs ~/project_Files/data
+cd ~/project_Files/reports/
+touch report1.md report2.md
+cd ~/project_Files/logs/
+touch system.log error.log file1.pdf file2.pdf
+cd ~/project_Files/data/
+touch data.csv info.txt
+nano ~/project_Files/reports/report1.md
+nano ~/project_Files/logs/system.log
+nano ~/project_Files/data/data.csv
+tar -cvf logs_backup.tar ~/project_Files/logs 
+mv logs_backup.tar ~/project_Files/
+tar -xvf ~/project_Files/logs_backup.tar -C ~/project_Files/
+find ~ "*.md"
+find ~/project_Files -name "*.log"
+find ~/project_Files -name "file1.pdf"
+find ~/project_Files -iname ".pdf"
+find ~/project_Files/logs -type f
+ln -s ~/project_files/data/data.csv ~/project_Files/link_data.csv
+nano ~/project_files/link_data.csv
+cat ~/project_files/link_data.csv
+cat ~/project_files/data/data.csv
+unlink ~/project_files/link_data.csv
+touch ~project_Files/summary.txt
+echo "Summary start" >> ~project_Files/summary.txt
+echo "21/8/2024  12:45" >> ~project_Files/summary.txt
+echo "Summary start" >> ~project_Files/summary.txt
+wc -l summary.txt | tee >> summary.txt
+wc -w report1.md
+wc -c system.log | tee >> summary.txt
+ls | wc -l | tee >> summary.txt
+cat summary.txt
+
+
+
+
+
+
